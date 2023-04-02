@@ -1,4 +1,6 @@
-// Get to know more throug this link https://chipglobe-dev.web.app/
+// Check out https://chipglobe-dev.web.app/
+//Buy from https://www.chipglobe.shop/en
+
 # D1 Mini Projects with Environmental Shields 
 
 This repository contains a collection of D1 Mini projects that utilize environmental shields, including temperature and humidity sensors, barometric pressure sensors, and more.
