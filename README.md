@@ -1,8 +1,8 @@
-// Check out https://chipglobe-dev.web.app/
-//Buy from https://www.chipglobe.shop/en
+- Check out https://chipglobe-dev.web.app/
+- Buy from https://www.chipglobe.shop/en
 //For internship opportunities, trainings and workshops, visit our website
-//1. www.chipglobe.come
-//2. www.carenuity.com
+-  www.chipglobe.come
+-  www.carenuity.com
 
 # D1 Mini Projects with Environmental Shields 
 
