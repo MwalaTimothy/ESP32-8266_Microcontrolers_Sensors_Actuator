@@ -1,7 +1,7 @@
 - Check out https://chipglobe-dev.web.app/
 - Buy from https://www.chipglobe.shop/en
 
-##For internship opportunities, trainings and workshops, visit our website
+## For internship opportunities, trainings and workshops, visit our website
 -  www.chipglobe.come
 -  www.carenuity.com
 
