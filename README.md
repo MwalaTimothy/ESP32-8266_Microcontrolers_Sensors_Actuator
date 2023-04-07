@@ -15,7 +15,7 @@ To get started with these projects, you'll need a dualbase board or a triple ada
 ## Hardware Requirements
 - Dual base adapter
 - ESP8266 D1-mini
-![Alt Text]([image_url](https://www.google.com/search?q=esp8266&rlz=1C1CHBD_enKE923KE923&sxsrf=APwXEdee_1IyFyIWrRSVK8wnnPgmLCNLJQ:1680893382457&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj7u93nt5j-AhWTtKQKHbc3Bi4Q_AUoAXoECAEQAw&biw=1353&bih=630&dpr=1.01#imgrc=LmDzIvgC_6_b7M))
+- ![WhatsApp Image 2023-01-21 at 11 25 56 AM (1)](https://user-images.githubusercontent.com/74060530/230662720-8255999f-85cf-49d9-8048-026005d061f3.jpeg)
 
 - Environmental shield/sensor
 
