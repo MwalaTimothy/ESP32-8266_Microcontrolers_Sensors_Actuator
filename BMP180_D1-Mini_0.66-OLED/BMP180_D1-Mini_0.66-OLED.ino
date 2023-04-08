@@ -1,138 +1,52 @@
-#include "DHT.h" //DHT library
-#include <SPI.h>
 #include <Wire.h>
-#include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>
+#include <Adafruit_BMP085.h>
+#include <SFE_MicroOLED.h> // Include the SFE_MicroOLED library
+#define PIN_RESET 255 //
+#define DC_JUMPER 0 // I2C Addres: 0 - 0x3C, 1 - 0x3D
+MicroOLED oled(PIN_RESET, DC_JUMPER); // Example I2C declaration
+Adafruit_BMP085 bmp;
 
-#define OLED_RESET 0
-Adafruit_SSD1306 display(OLED_RESET);
-
-//Pin to which the DHT11 sensor is connected.
-//With the DHT11 shield it is the digital pin D4.
-#define DHTPIN D4
- 
-//Determine which type of DHT sensor is used.
-#include "DHT.h" //DHT Bibliothek
-#include <SPI.h>
-#include <Wire.h>
-#include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>
-
-#define OLED_RESET 0
-Adafruit_SSD1306 display(OLED_RESET);
-
-//Pin an welchem der DHT11 Sensor angeschlossen ist.
-//Beim DHT11 Shield ist es der digitale Pin D4.
-#define DHTPIN D4 
- 
-//Festlegen welcher Typ von DHT Sensor verwendet wird.
-#define DHTTYPE DHT11
-
-//Initialisieren des Sensors mit dem Anschluss und dem Typ
-DHT dht(DHTPIN, DHTTYPE);
- 
-void setup() {
-  Serial.begin(9600); //Begin der seriellen Kommunikation mit 9600 Baud.
-  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
-  display.display();
-  delay(2000);
-  display.clearDisplay(); 
-  dht.begin(); //DHT Kommunikation beginnen.
+void setup()
+{
+Serial.begin(9600);
+if (!bmp.begin()) {
+Serial.println("Could not find a valid BMP180 sensor, check wiring!");
+while (1) {}
 }
- 
-void loop() {
-  //Der DHT11 Sensor liefert alle 2 Sekunden einen neuen
-  //Wert daher lohnt es sich nicht die loop konstant durchlaufen 
-  //zu lassen.
-  delay(2000);
- 
-  //lesen der Luftfeuchtigkeit
-  double luftfeuchtigkeit = dht.readHumidity();
-  //lesen der Temperatur in Grad Celsius
-  double temperaturC = dht.readTemperature();
-  //lesen der Temperatur in Grad Fahrenheit
-  //mit dem Boolean Parameter wird "gesteuert" ob
-  //die Temperatur in Fahrenheit oder Celsius ausgegeben wird.
-  double temperaturF = dht.readTemperature(true);
- 
-  //Prüfen ob die Werte erfolgreich gelesen wurden.
-  if (isnan(luftfeuchtigkeit) || isnan(temperaturC) || isnan(temperaturF)) {
-    Serial.println("Fehler beim lesen von Daten.");
-    return;
-  }
-
-  display.clearDisplay();
-  display.setTextSize(1);
-  display.setTextColor(WHITE);
-  
-  display.setCursor(32,8);
-  display.println("DHT11");
-
-  display.setCursor(32,9);
-  display.println("_____");
-    
-  display.setCursor(32,17);
-  String tempValue = String(temperaturC);
-  display.println("T: "+tempValue+"C");
-
-  display.setCursor(32,25);
-  String humValue = String(luftfeuchtigkeit);
-  display.println("H: "+humValue+"%");
-  
-  display.display();
-  delay(2000);
+oled.begin();
+oled.clear(ALL); // Clear the display's memory (gets rid of artifacts)
+oled.display();
 }
-
-//Initialize the sensor with the pin and type
-DHT dht(DHTPIN, DHTTYPE);
- 
-void setup() {
-  Serial.begin(9600); //Begin serial communication at 9600 baud.
-  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
-  display.display();
-  delay(2000);
-  display.clearDisplay(); 
-  dht.begin(); //DHT communication begin.
-}
- 
-void loop() {
-  //DHT22 sensor returns a new value every 2 seconds.
-  //Value so it is not worth to run the loop constantly. 
-  //to let it run.
-  delay(2000);
- 
-  //read the temperature and humidity
-  double humidity = dht.readHumidity();
-  //read the temperature in degrees Celsius
-  double temperatureC = dht.readTemperature();
-  //read temperature in degrees Fahrenheit
-  //the boolean parameter is used to "control" whether
-  //read the temperature in Fahrenheit or Celsius.
-  double temperatureF = dht.readTemperature(true);
- 
-  //Check if the values were read successfully.
-  if (isnan(humidity) || isnan(temperatureC) || isnan(temperatureF)) {
-    Serial.println("Error reading data.");
-    return;
-  }
-   //clears display
-  display.clearDisplay();
-  display.setTextSize(1);
-
-  //display temperature
-  display.setCursor(32,8);
-  display.println("DHT22");
-  display.setCursor(32,9);
-  display.println("_____");  
-  display.setCursor(32,17);
-  String tempValue = String(temperatureC);
-  display.println("T: "+tempValue+"C");
-
-//display humidity
-  display.setCursor(32,25);
-  String humValue = String(humidity);
-  display.println("H: "+humValue+"%");
-  
-  display.display();
-  delay(2000);
+void loop()
+{
+// Wait a few seconds between measurements.
+delay(2000);
+oled.clear(PAGE);
+oled.setFontType(0); // set font type 0, please see declaration in SFE_MicroOLED.cpp
+oled.setCursor(1, 3);
+oled.print("Pressure = ");
+oled.setCursor(1, 12);
+oled.print(bmp.readPressure());
+oled.print(" Pa");
+oled.setCursor(1, 21);
+oled.print("Temp =");
+oled.setCursor(1, 30);
+oled.print(bmp.readTemperature());
+oled.print(" *C ");
+oled.display();
+delay(2000);
+//2nd page of readings
+oled.clear(PAGE);
+oled.setFontType(0); // set font type 0, please see declaration in SFE_MicroOLED.cpp
+oled.setCursor(1, 3);
+oled.print("Altitude = ");
+oled.setCursor(1, 12);
+oled.print(bmp.readAltitude());
+oled.print(" m");
+oled.setCursor(1, 21);
+oled.print("Sea level=");
+oled.setCursor(1, 30);
+oled.print(bmp.readSealevelPressure());
+oled.print(" Pa");
+oled.display();
 }
