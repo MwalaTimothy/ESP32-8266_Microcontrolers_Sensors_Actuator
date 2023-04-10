@@ -13,7 +13,7 @@ To get started with these projects, you'll need a dualbase board or a triple ada
 ## Software Requirements
 - [Arduino IDE](https://www.arduino.cc/en/software) for programming the ESP8266 D1-mini
 - [ESP8266 library for Arduino](https://github.com/esp8266/Arduino)
-- [Adafruit BME280 library](https://github.com/adafruit/Adafruit_BME280_Library)
+- [0.66 OLED SHIELD library](https://github.com/mcauser/Adafruit_SSD1306/tree/esp8266-64x48)
 
 ## Installation
 1. Clone this repository to your local machine using `git clone https://github.com/YOUR-USERNAME/Digital-Weather-Station.git`
