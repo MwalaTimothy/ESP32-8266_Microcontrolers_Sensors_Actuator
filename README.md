@@ -1,12 +1,4 @@
-- Check out https://chipglobe-dev.web.app/
-- Buy from https://www.chipglobe.shop/en
-
-## For internship opportunities, trainings and industrial partnerships, visit our website
--  www.chipglobe.com
--  www.carenuity.com
-
-# D1 Mini Projects with Environmental Shields 
-
+# D1 Mini Projects with Environmental Shields (CLOUDFREE!)
 This repository contains a collection of D1 Mini projects that utilize environmental shields, including temperature and humidity sensors, barometric pressure sensors, and more.
 
 ## Getting Started
@@ -37,3 +29,11 @@ If you'd like to contribute to the projects themselves, please feel free to subm
 
 ## License
 All of the code in this repository is released under the MIT License. You can find the full text of the license in the LICENSE file.
+
+## IMPORTANT SITES
+- Check out https://chipglobe-dev.web.app/
+- Buy from https://www.chipglobe.shop/en
+
+## For internship opportunities, trainings and industrial partnerships, visit our website
+-  www.chipglobe.com
+-  www.carenuity.com
