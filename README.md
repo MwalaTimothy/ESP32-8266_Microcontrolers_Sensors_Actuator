@@ -16,10 +16,9 @@ A DIY IOT KIT 💥 from www.carenuity.com
 - DID YOU KNOW! you can simply use a web flashing tool https://chipglobe-dev.web.app/ and have your kit running without strain
 
 ## Installation
-1. Clone this repository to your local machine using `git clone https://github.com/YOUR-USERNAME/Digital-Weather-Station.git`
-2. Open the project in the Arduino IDE and upload the code to the ESP8266 D1-mini.
-3. Connect the environmental shield to the ESP8266 D1-mini.
-4. Power the ESP8266 D1-mini using a USB cable.
+1. Open the project in the Arduino IDE and upload the code to the ESP8266 D1-mini.
+2. Connect the environmental shield to the ESP8266 D1-mini.
+3. Power the ESP8266 D1-mini using a USB cable.
 
 ## Contributing
 If you find these projects useful and would like to support my commitment to creating open source hardware and software, you can make a contribution via PayPal to mwalatimo@gmail.com. Your support is greatly appreciated!
