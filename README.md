@@ -9,6 +9,7 @@ To get started with these projects, you'll need a dualbase board or a triple ada
 - ESP8266 D1-mini
 - Environmental shield/sensor
 - 0.66 OLED DISPLAY
+- https://github.com/MwalaTimothy/D1_Mini.wiki.git
 
 ## Software Requirements
 - [Arduino IDE](https://www.arduino.cc/en/software) for programming the ESP8266 D1-mini
