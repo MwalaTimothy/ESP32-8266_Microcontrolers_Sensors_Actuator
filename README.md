@@ -5,11 +5,8 @@ This repository contains a collection of D1 Mini projects that utilize environme
 To get started with these projects, you'll need a dualbase board or a triple adapter D1 Mini board,as well as one or more environmental shields. The code for each project is included in this repository, and you can upload it to your D1 Mini board using the Arduino IDE or another compatible programming environment.
 
 ## Hardware Requirements
-- Dual base adapter / A Trippler
-- ESP8266 D1-mini
-- Environmental shield/sensor
-- 0.66 OLED DISPLAY
-![image](https://user-images.githubusercontent.com/74060530/232207212-4e855820-2f56-4385-9eb0-b2f23c969ee6.png)
+A DIY IOT KIT 💥
+- ![image](https://user-images.githubusercontent.com/74060530/232207212-4e855820-2f56-4385-9eb0-b2f23c969ee6.png)
 
 ## Software Requirements
 - [Arduino IDE](https://www.arduino.cc/en/software) for programming the ESP8266 D1-mini
