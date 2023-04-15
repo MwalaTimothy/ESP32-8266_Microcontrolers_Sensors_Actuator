@@ -5,13 +5,15 @@ This repository contains a collection of D1 Mini projects that utilize environme
 To get started with these projects, you'll need a dualbase board or a triple adapter D1 Mini board,as well as one or more environmental shields. The code for each project is included in this repository, and you can upload it to your D1 Mini board using the Arduino IDE or another compatible programming environment.
 
 ## Hardware Requirements
-A DIY IOT KIT 💥
+A DIY IOT KIT 💥 from www.carenuity.com
 - ![image](https://user-images.githubusercontent.com/74060530/232207212-4e855820-2f56-4385-9eb0-b2f23c969ee6.png)
 
 ## Software Requirements
 - [Arduino IDE](https://www.arduino.cc/en/software) for programming the ESP8266 D1-mini
 - [ESP8266 library for Arduino](https://github.com/esp8266/Arduino)
 - [0.66 OLED SHIELD library](https://github.com/mcauser/Adafruit_SSD1306/tree/esp8266-64x48)
+
+- DID YOU KNOW! you can simply use a web flashing tool https://chipglobe-dev.web.app/ and have your kit running without strain
 
 ## Installation
 1. Clone this repository to your local machine using `git clone https://github.com/YOUR-USERNAME/Digital-Weather-Station.git`
@@ -26,10 +28,6 @@ If you'd like to contribute to the projects themselves, please feel free to subm
 
 ## License
 All of the code in this repository is released under the MIT License. You can find the full text of the license in the LICENSE file.
-
-## IMPORTANT SITES
-- Check out https://chipglobe-dev.web.app/
-- Buy from https://www.chipglobe.shop/en
 
 ## For internship opportunities, trainings and industrial partnerships, visit our website
 -  www.chipglobe.com
