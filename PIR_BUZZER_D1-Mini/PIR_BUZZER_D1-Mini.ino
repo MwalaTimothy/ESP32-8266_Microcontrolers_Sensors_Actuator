@@ -1,11 +1,4 @@
-/*
- * Created by ArduinoGetStarted.com
- *
- * This example code is in the public domain
- *
- * Tutorial page: https://arduinogetstarted.com/tutorials/arduino-motion-sensor-piezo-buzzer
- */
- #include <Arduino.h>
+#include <Arduino.h>
 const int MOTION_SENSOR_PIN = D3;   // Arduino pin connected to the OUTPUT pin of motion sensor
 const int BUZZER_PIN        = D5;   // Arduino pin connected to Buzzer's pin
 int motionStateCurrent      = LOW; // current  state of motion sensor's pin
