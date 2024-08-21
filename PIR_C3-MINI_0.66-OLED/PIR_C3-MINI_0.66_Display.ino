@@ -30,7 +30,7 @@ void loop()
   {
     display.clearDisplay();
     display.setTextSize(1);
-    display.setCursor(25, 15);
+    display.setCursor(35, 15);
     display.print("INTRUDER!");
     display.display();
   } 
@@ -38,7 +38,7 @@ void loop()
   {
     display.clearDisplay();
     display.setTextSize(1);
-    display.setCursor(30, 15);
+    display.setCursor(35, 15);
     display.print("No Motion");
     display.display();
   }
